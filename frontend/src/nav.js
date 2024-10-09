@@ -1,7 +1,7 @@
 import React from "react";
-import myBackGround from './image/logo.png'
+import myBackGround from './screen/image/logo.png'
 import { NavLink } from 'react-router-dom'
-import './css/Index.css'
+import './screen/css/Index.css'
 export default function Navbar() {
     return (
         <nav style={{

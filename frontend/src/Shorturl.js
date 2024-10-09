@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import axios from "axios";
-import './css/shorturl.css'
+import './screen/css/shorturl.css'
 import { QRCodeCanvas } from "qrcode.react";
 import { toPng } from 'html-to-image';
 export default function ShortUrl() {

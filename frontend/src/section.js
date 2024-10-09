@@ -1,6 +1,6 @@
 import React from "react";
-import './css/Index.css'
-import link from './image/link.png'
+import './screen/css/Index.css'
+import link from './screen/image/link.png'
 export default function Section() {
     return (
         <section style={{
