@@ -22,7 +22,7 @@ export default function List() {
     return (
         <div style={{ display: "flex", flexFlow: "column", justifyContent: "center", alignItems: "center" }}>
             <h1>User List</h1>
-            <table style={{ borderCollapse: 'separate', borderSpacing: '10px' }}>
+            <table style={{ borderCollapse: 'separate', borderSpacing: '10px', marginBottom: "10px" }}>
                 <thead>
                     <tr>
                         <th style={{ padding: '10px' }}>id</th>
