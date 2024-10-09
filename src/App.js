@@ -9,8 +9,8 @@ export default function app() {
   return (
 
     <>
-      <Navbar />
       <BrowserRouter>
+        <Navbar />
         <Routes>
           <Route path='/' element={<Section />} />
           <Route path='/ShortUrl' element={<ShortUrl />} />
