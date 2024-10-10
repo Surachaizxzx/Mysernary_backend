@@ -25,9 +25,14 @@
   display: flex;
   justify-content: space-between; /* จัดให้ QR code อยู่ห่างกัน */
   margin-top: 20px;
-}
-
+},
 .QR {
+    text-align: center;
+    margin: 0 20px;
+    width: 200px; /* ตั้งขนาดให้เหมาะสม */
+    height: 200px; /* ตั้งขนาดให้เหมาะสม */
+}
+.QRT {
   text-align: center; /* จัดข้อความให้ตรงกลาง */
   margin: 0 20px; /* เพิ่มระยะห่างระหว่าง QR code กับข้อความ */
   width: 400px;
