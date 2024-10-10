@@ -85,23 +85,27 @@ export default function ShortUrl() {
             {shortUrl && ( //เป็นจริงหรือไม่ถ้าเป็นจริงก็มาทำdiv
                 <div className="link_qr">
                     Short URL: <br /><a href={shortUrl} target="_blank" className="p-5" rel="noopener noreferrer">{shortUrl}</a>
-                    <div className="qrcodes">
-                        <div className="QRS">
-                            <div className="QR-wrapper"><QRCodeCanvas className="QR" ref={originalQrRef} value={urlInput} /></div>
-                            <p className="QRT">{urlInput}</p>
+                    <div className="qr-contrain">
+                        <div className="contrain_qrs">
+                            <div className="QR_P">
+                            <div className="QR-Warp"><QRCodeCanvas className="QR" ref={originalQrRef} value={urlInput} /></div>
+                            <p className="Url-text">{urlInput}</p></div>
                             <div>
                                 <button className="btn btn-md mt-3 bg-success btn-secondary" onClick={() => onSaveQRCode(originalQrRef)}>Save Original Url QR Code </button>
                                 <div><button className="button btn btn-md mt-3 bg-secondary btn-secondary" onClick={() => onCopyLink(urlInput)}><i class="bi bi-box-arrow-in-down">Copy</i></button></div>
                             </div>
                         </div>
-                        <div className="QRS">
-                            <div className="QR-wrapper"><QRCodeCanvas className="QR" ref={shortQrRef} value={shortUrl} /></div>
-                            <p className="QRT">{shortUrl}</p>
+                        
+                        <div className="contrain_qrs">
+                            <div className="QR_P">
+                            <div className="QR-Warp"><QRCodeCanvas className="QR" ref={shortQrRef} value={shortUrl} /></div>
+                            <p className="Url-text">{shortUrl}</p></div>
                             <div>
-                                <button className="btn btn-md mt-3 bg-success btn-secondary" onClick={() => onSaveQRCode(shortQrRef)}>Save Short Url QR Code</button>
+                                <button className="btn btn-md mt-3 bg-success btn-secondary" onClick={() => onSaveQRCode(shortQrRef)}>Save Original Url QR Code </button>
                                 <div><button className="button btn btn-md mt-3 bg-secondary btn-secondary" onClick={() => onCopyLink(shortUrl)}><i class="bi bi-box-arrow-in-down">Copy</i></button></div>
                             </div>
                         </div>
+                        
                     </div >
 
                 </div >
