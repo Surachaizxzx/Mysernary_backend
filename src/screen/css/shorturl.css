@@ -31,7 +31,7 @@
   text-align: center; /* จัดข้อความให้ตรงกลาง */
   margin: 0 20px; /* เพิ่มระยะห่างระหว่าง QR code กับข้อความ */
   width: 400px;
-  overflow: hidden;
+/*   overflow: hidden; */
   height: 80px;
 }
 .QRS {
