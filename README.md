@@ -3,5 +3,9 @@
   ซึ่งผมdeployบน vercel เเยกส่วน deploy กับ backend คือ คนละโดเมน
   ขั้นเเรกการติดตั้ง เเค่ clone ไฟล์ จาก git เเล้ว พิมพ์ npm i เเล้ว npm start ได้เลย
   เเต่ถ้า จะอัพขึ้น server เช่น vercel ต้องทำ vercel.json  ก็ใช้ได้เลย 
-
-  ซึ่งผมใช้ react ในการ เขียน อาจจะมีบัค คือ ผมใช้ React Router คือ React Router  บน Vercel เวลา รีเฟรชจะเจอข้อผิดพลาด "Not Found" มันเป็นเพราะเกิดจากการที่ server ไม่รู้จัก route นั้น เพราะการใช้ React Router จะทำให้การ routing ถูกจัดการที่ฝั่ง client โดย JavaScript และเมื่อทำการรีเฟรชหน้าหรือเข้า URL โดยตรงใน browser, server จะพยายามหาหน้าเว็บที่มีอยู่จริง ซึ่งไม่มีอยู่จริงใน server ครับ เเต่ option ได้หมดเลย
+  การยิง req
+  ---ใช้ axios ในการยิง ไปที่backend ถ้า deploy backend ใน ที่บริการอื่น จะต้องเเก้ไข url domain ของ backend ที่ ในไฟล์ list.js เเละ Shorturl.js 
+  ซึ่งผมใช้ react  ในการ เขียน ตอนนี้ รองรับเเค่ หน้าจอคอมพิวเตอร์นะครับ
+  ---ตกเเต่งใช้ canva (สร้างโลโก้)
+  ---boostrap 5 
+  ---css

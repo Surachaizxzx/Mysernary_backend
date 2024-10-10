@@ -1,9 +1,12 @@
-import React from "react";
+import React,{useState}  from "react";
 import myBackGround from './screen/image/logo.png'
-import { NavLink } from 'react-router-dom'
 import './screen/css/Index.css'
+import ShortUrl from './Shorturl'
+import Section from './section'
+import List from './list'
 export default function Navbar() {
-    return (
+    const [currentPage, setCurrentPage] = useState('home');
+    return (<>
         <nav style={{
             display: 'flex', justifyContent: 'space-between'
         }}>
@@ -11,14 +14,20 @@ export default function Navbar() {
                 <img src={myBackGround} alt="logo" />
                 <h1>Short Url</h1>
             </div>
-            <div className="contrainer ">
+            <div className="contrainer">
                 <ul className="list">
-                    <NavLink className={({ isActive }) => isActive ? "listitemActive " : "listitem"} to="/" >Home</NavLink>
-                    <NavLink className={({ isActive }) => isActive ? "listitemActive " : "listitem"} to="/ShortUrl">Create Short url</NavLink>
-                    <NavLink className={({ isActive }) => isActive ? "listitemActive " : "listitem"} to="/List">Short Link History</NavLink>
+                    <li className={currentPage ==='home' ? 'listitemActive':'listitem'} onClick={()=>setCurrentPage('home')}>Home</li>
+                    <li className={currentPage ==='Create Short url' ? 'listitemActive':'listitem'} onClick={()=>setCurrentPage('Create Short url')}>Create Short url</li>
+                    <li onClick={()=>setCurrentPage('Short Link History')} className={currentPage ==='Short Link History' ? 'listitemActive':'listitem'} >Short Link History</li>
                 </ul>
             </div>
         </nav >
-
+        <div>
+            {currentPage ==='home'?<Section/>:''}
+            {currentPage ==='Create Short url'?<ShortUrl/>:''}
+            {currentPage ==='Short Link History'?<List/>:''}
+        </div>
+        </>
     )
+    
 }
