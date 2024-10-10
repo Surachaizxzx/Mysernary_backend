@@ -88,7 +88,7 @@ export default function ShortUrl() {
                     <div className="qrcodes">
                         <div className="QRS">
                             <QRCodeCanvas className="QR" ref={originalQrRef} value={urlInput} />
-                            <p className="QR">{urlInput}</p>
+                            <p className="QRT">{urlInput}</p>
                             <div>
                                 <button className="btn btn-md mt-3 bg-success btn-secondary" onClick={() => onSaveQRCode(originalQrRef)}>Save Original Url QR Code </button>
                                 <div><button className="button btn btn-md mt-3 bg-secondary btn-secondary" onClick={() => onCopyLink(urlInput)}><i class="bi bi-box-arrow-in-down">Copy</i></button></div>
@@ -96,7 +96,7 @@ export default function ShortUrl() {
                         </div>
                         <div className="QRS">
                             <QRCodeCanvas className="QR" ref={shortQrRef} value={shortUrl} />
-                            <p className="QR">{shortUrl}</p>
+                            <p className="QRT">{shortUrl}</p>
                             <div>
                                 <button className="btn btn-md mt-3 bg-success btn-secondary" onClick={() => onSaveQRCode(shortQrRef)}>Save Short Url QR Code</button>
                                 <div><button className="button btn btn-md mt-3 bg-secondary btn-secondary" onClick={() => onCopyLink(shortUrl)}><i class="bi bi-box-arrow-in-down">Copy</i></button></div>
