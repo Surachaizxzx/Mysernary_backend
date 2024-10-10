@@ -48,7 +48,7 @@ export default function ShortUrl() {
     }
     const onSaveQRCode = (qrRef) => {
         if (qrRef.current) {
-            toPng(qrRef.current, { pixelRatio: 3 })
+            toPng(qrRef.current, { pixelRatio: 1})
                 .then((dataUrl) => {
                     const link = document.createElement('a'); //สร้าง เเเอดทริบิ้ว a
                     link.download = 'qrcode.png'; //ระบุชืิ่อไฟล์
