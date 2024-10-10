@@ -48,7 +48,7 @@ export default function ShortUrl() {
     }
     const onSaveQRCode = (qrRef) => {
         if (qrRef.current) {
-            toPng(qrRef.current)
+            toPng(qrRef.current,{pixelRatio :3,backgroundColor:'#ffffff'})
                 .then((dataUrl) => {
                     const link = document.createElement('a'); //สร้าง เเเอดทริบิ้ว a
                     link.download = 'qrcode.png'; //ระบุชืิ่อไฟล์
@@ -87,7 +87,7 @@ export default function ShortUrl() {
                     Short URL: <br /><a href={shortUrl} target="_blank" className="p-5" rel="noopener noreferrer">{shortUrl}</a>
                     <div className="qrcodes">
                         <div className="QRS">
-                            <QRCodeCanvas className="QR" ref={originalQrRef} value={urlInput} />
+                            <div className="QR-wrapper"><QRCodeCanvas className="QR" ref={originalQrRef} value={urlInput} /></div>
                             <p className="QRT">{urlInput}</p>
                             <div>
                                 <button className="btn btn-md mt-3 bg-success btn-secondary" onClick={() => onSaveQRCode(originalQrRef)}>Save Original Url QR Code </button>
@@ -95,7 +95,7 @@ export default function ShortUrl() {
                             </div>
                         </div>
                         <div className="QRS">
-                            <div><QRCodeCanvas className="QR" ref={shortQrRef} value={shortUrl} /></div>
+                            <div className="QR-wrapper"><QRCodeCanvas className="QR" ref={shortQrRef} value={shortUrl} /></div>
                             <p className="QRT">{shortUrl}</p>
                             <div>
                                 <button className="btn btn-md mt-3 bg-success btn-secondary" onClick={() => onSaveQRCode(shortQrRef)}>Save Short Url QR Code</button>
