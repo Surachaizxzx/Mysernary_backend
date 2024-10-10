@@ -21,34 +21,34 @@
 .linkshort {
   padding-top: 30px;
 }
-.qrcodes {
+.qr-contrain{
   display: flex;
-  justify-content: space-between; /* จัดให้ QR code อยู่ห่างกัน */
-  margin-top: 20px;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
 }
-.QR {
-    text-align: center;
-    margin: 0 20px;
-    width: 200px; /* ตั้งขนาดให้เหมาะสม */
-    height: 200px; /* ตั้งขนาดให้เหมาะสม */
+.QR-Warp{
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.QR-wrapper{
-  display:flex;
-  justify-content:center;
-  width:100%
+.QR_P{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }
-.QRT {
-  text-align: center; /* จัดข้อความให้ตรงกลาง */
-  margin: 0 20px; /* เพิ่มระยะห่างระหว่าง QR code กับข้อความ */
+.contrain_qrs{
   width: 400px;
-  overflow: hidden;
-  height: 80px;
+  justify-content: center;
+  align-items: center;
 }
-.QRS {
+.Url-text{
   text-align: center;
-  margin: 0 10px; /* ระยะห่างระหว่าง QR Code */
+  overflow: hidden;
+  width: 300px;
+  height: 50px;
 }
-
 .link_qr {
   display: flex;
   flex-direction: column;
